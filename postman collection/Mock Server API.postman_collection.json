@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "d1da6cc2-889c-41bf-960a-db66a2ccc202",
+		"name": "Mock Server API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create new/Override existing MockService",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n\t\"id\" : 1,\n\t\"name\" : \"Vicky\",\n\t\"college\" : \"AAMEC\", \n\t\"skills\" : [\n\t\t\"Java\",\n\t\t\"C\"\n\t]\n},\n{\n\t\"id\" : 2,\n\t\"name\" : \"Kee\",\n\t\"college\" : \"AAMEC\", \n\t\"skills\" : [\n\t\t\"SQL\",\n\t\t\"Azure DevOps\"\n\t]\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/mockService/students"
+			},
+			"response": []
+		},
+		{
+			"name": "Read JSON from MockService",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/mockService/students"
+			},
+			"response": []
+		},
+		{
+			"name": "Get List of All MockServices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/mockService"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
